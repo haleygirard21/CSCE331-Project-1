@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,500;0,700;0, 800;0,980;1,100;1, 200;1,300;1,400;1,500;1,600; 1,700;1,880; 1,900&display=swap');
+
+/* setting colors to reuse later */
+:root{
+--water-color: #5ac5ff;
+--white-color: #FFFFFF;
+--water-text-color: #484848;
+--gray-color: #888888;
+--fire-color: #f25225;
+--fire-text-color: #FFFFFF;
+--fire-bg-color: #283137;
+}
+    /* water mode (regular/light mode) */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        min-height: 100vh;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        background: var(--white-color);
+        transition: .3s;
+    }
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    .container {
+        max-width:1100px;
+        padding: 10px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .header {
+        padding: 0;
+        background: var(--white-color);
+        box-shadow: 0px -2px 10px rgba(0,0,0,.1);
+        transition: .3s;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .header_body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header_initials {
+        font-weight: 600;
+        font-size: 28px;
+        color: var(--water-text-color);
+        transition: .3s;
+    }
+    .header_rightside {
+        display: flex;
+        align-items: center;
+        }
+    .header-menu_list {
+        display: flex;
+        align-items: center;
+    }
+    .header-menu_item {
+        padding: 0 10px;
+    }
+
+    /*making the colored underline for header lol*/
+    .header-menu_link {
+        font-weight: 500;
+        font-size: 18px;
+        color: var(--water-text-color);
+        display: inline-flex;
+        position: relative;
+        transition: .3s;
+    }
+    .header-menu_link:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 0;
+        height: 4px;
+        background: var(--water-color);
+        border-radius: 2px;
+        transition: .3s;
+    }
+    .header-menu_link:hover:after {
+        width: 100%;
+    }
+    .header_flame{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-size: 24px;
+        color: var(--water-text-color);
+        cursor: pointer;
+        transition: .3s;
+        opacity: 100;
+    }
+    .header_water{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-size: 24px;
+        color: var(--water-text-color);
+        cursor: pointer;
+        transition: .3s;
+        opacity: 0;
+    }
+    .header_bxmenu{
+        display: none;
+    }
+    .header_bxmenu-menu{
+        margin-left: 10px;
+        font-size: 26px;
+        color: var(--water-text-color);
+        cursor: pointer;
+        transition: .3s;
+        display: flex;
+        align-items: center;
+    }
+
+    .intro {
+        min-height: calc(100vh- 80px);
+        display: flex;
+        align-items: center;
+    }
+    .intro_body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+
+    .intro_content{
+        max-width:500px;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .fireProfile{
+        height:350px;
+        display: block;
+        opacity: 0;
+      }
+    .waterProfile {
+        height:350px;
+        display: block;
+        opacity: 100;
+        position: absolute;
+        left: 70%;
+        top: 20%;
+    }
+
+    .intro_title {
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 1.2;
+        color: var(--water-text-color);
+        margin-bottom: 10px;
+        transition: .3s;
+    }
+    .intro_title span {
+        color: var(--water-color);
+        transition: .3s;
+    }
+    .intro_position {
+        display: block;
+        font-weight: 500;
+        font-size: 24px;
+        color: var(--gray-color);
+        margin-bottom: 25px;
+    }
+    .intro_text {
+        font-size: 16px;
+        line-height: 1.3;
+        color: var(--water-text-color);
+        margin-bottom: 30px;
+        transition: .3s;
+    }
+
+    .quote_content{
+        position:absolute;
+        left:50%;
+        top:58%;
+        transform:translate(-13%,-42%);
+    }
+      .quote_content p:nth-child(1){
+        font-size: 30px;
+        line-height: 1.3;
+        color: var(--water-text-color);
+        margin-bottom: 10px;
+        margin-left: 50px;
+        transition: .3s;
+    }
+      .quote_content p:nth-child(2){
+       opacity: 0;
+    }
+    .quote_content span {
+        color: var(--water-color);
+        transition: .3s;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+
+    .icons_menu{
+        margin-left: 10px;
+        font-size: 26px;
+        color: var(--water-text-color);
+        cursor: pointer;
+        transition: .3s;
+        display: flex;
+        align-items: center;
+    }
+    .uni_icon{
+        align-items: center;
+    }
+    .insta_icon{
+        align-items: center;
+    }
+    .linkedin_icon{
+        align-items: center;
+    }
+    .dna_icon{
+        align-items: center;
+    }
+    .spotify_icon{
+        align-items: center;
+    }
+    .cat_icon{
+        align-items: center;
+    }
+
+    .resume_frame{
+        position: fixed;
+        left: 50%;
+        top: 15%;
+        padding: 0;
+        margin: 0;
+    }
+    .resume_frame > iframe{
+        position: fixed;
+        left: 50%;
+        top: 25%;
+        padding: 0;
+        margin: 0;
+        width: 600px;
+        height: 70%;
+    }
+
+
+    .traillogo{
+        height: 230px;
+        position:static;
+        margin-top: -50%;
+        margin-left: 0%;
+        left: -30%;
+      }
+      .trailsigns{
+        height: 230px;
+        position:static;
+        margin-top: -50%;
+        margin-left: 0%;
+        left: -30%;
+      }
+
+      .astaxanthin{
+        height: 230px;
+        position:static;
+        margin-top: 20%;
+        margin-left: -30%;
+        left: 40%;
+      }
+
+      .service_content{
+        max-width:1300px;
+        width: 100%;
+        padding-right: 20px;
+    }
+    .service_text {
+        font-size: 16px;
+        line-height: 1.3;
+        color: var(--water-text-color);
+        margin-bottom: 30px;
+        transition: .3s;
+    }
+
+    .pawsgroup{
+        width: 600px;
+        position:static;
+        margin-top: 0%;
+        margin-left: 25%;
+      }
+    .wolves{
+        height: 191px;
+        position:static;
+        margin-top: 0%;
+        margin-left: 25%;
+      }
+      .cats{
+        height: 191px;
+        position:static;
+        margin-top: 0%;
+        margin-left: 2.35px;
+      }
+      .dog{
+        height: 191px;
+        position:static;
+        margin-top: 0%;
+        margin-left: 2.35px;
+      }
